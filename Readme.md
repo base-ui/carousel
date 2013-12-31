@@ -13,6 +13,7 @@
 
 ## Todo
 - remove jQuery dependency
+- carousel loop
 
 
 ## License
