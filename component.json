@@ -1,0 +1,22 @@
+{
+  "name": "carousel",
+  "repo": "base-ui/carousel",
+  "description": "Base carousel ui",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {
+    "component/jquery": "*",
+    "shallker-wang/eventy": "*"
+  },
+  "development": {},
+  "license": "MIT",
+  "main": "index.js",
+  "styles": [
+    "css/carousel.css"
+  ],
+  "scripts": [
+    "index.js",
+    "lib/carousel.js",
+    "lib/slide-list.js"
+  ]
+}

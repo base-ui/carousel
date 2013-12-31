@@ -1,0 +1,14 @@
+.ui.carousel
+  overflow hidden
+
+  >.slide-list
+    &:before, &:after
+      display table
+      content " "
+      line-height 0
+
+    &:after
+      clear both
+
+    >.slide
+      float left
