@@ -20,7 +20,7 @@
 ## Todo
 - remove jQuery dependency
 - ~~carousel loop~~
-- alow empty slides
+- ~~alow empty slides~~
 
 ## License
 
