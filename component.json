@@ -5,6 +5,7 @@
   "version": "0.0.1",
   "keywords": [],
   "dependencies": {
+    "shallker/list": "*",
     "component/jquery": "*",
     "shallker-wang/eventy": "*"
   },
@@ -17,6 +18,7 @@
   "scripts": [
     "index.js",
     "lib/carousel.js",
+    "lib/slide.js",
     "lib/slide-list.js"
   ]
 }
