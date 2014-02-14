@@ -1,0 +1,34 @@
+extends layout/default
+
+append content
+  .ui.carousel(style="width: 400px; height: 200px;")
+    .slide-list
+      .slide
+        img(src="http://dummyimage.com/200x200&text=1")
+      .slide
+        img(src="http://dummyimage.com/200x200&text=2")
+      .slide
+        img(src="http://dummyimage.com/200x200&text=3")
+      .slide
+        img(src="http://dummyimage.com/200x200&text=4")
+      .slide
+        img(src="http://dummyimage.com/200x200&text=5")
+      .slide
+        img(src="http://dummyimage.com/200x200&text=6")
+
+  br
+  button(onclick="carousel.prev()") prev
+  button(onclick="carousel.next()") next
+  button(onclick="carousel.left(1)") left(1)
+  button(onclick="carousel.right(1)") right(1)
+  button(onclick="carousel.left(2)") left(2)
+  button(onclick="carousel.right(2)") right(2)
+  button(onclick="carousel.start()") start
+  button(onclick="carousel.end()") end
+
+append scripts
+  script
+    var Carousel = require('carousel');
+    var carousel = new Carousel(document.querySelector('.ui.carousel'));
+
+    carousel.continuous = false;
