@@ -1,0 +1,15 @@
+.ui.carousel {
+  overflow: hidden;
+}
+.ui.carousel >.slide-list:before,
+.ui.carousel >.slide-list:after {
+  display: table;
+  content: " ";
+  line-height: 0;
+}
+.ui.carousel >.slide-list:after {
+  clear: both;
+}
+.ui.carousel >.slide-list >.slide {
+  float: left;
+}
