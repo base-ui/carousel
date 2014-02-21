@@ -17,8 +17,6 @@
   ],
   "scripts": [
     "index.js",
-    "lib/carousel.js",
-    "lib/slide.js",
-    "lib/slide-list.js"
+    "lib/carousel.js"
   ]
 }

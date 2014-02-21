@@ -1,20 +1,22 @@
 extends layout/default
 
 append content
-  .ui.carousel(style="width: 400px; height: 200px;")
+  .ui.carousel(style="width: 400px; height: 100px;")
     .slide-list
-      .slide
-        img(src="http://dummyimage.com/200x200&text=1")
-      .slide
-        img(src="http://dummyimage.com/200x200&text=2")
-      .slide
-        img(src="http://dummyimage.com/200x200&text=3")
-      .slide
-        img(src="http://dummyimage.com/200x200&text=4")
-      .slide
-        img(src="http://dummyimage.com/200x200&text=5")
-      .slide
-        img(src="http://dummyimage.com/200x200&text=6")
+      mixin Slide(text)
+        .slide
+          img(src="http://dummyimage.com/100x100&text=#{text}")
+
+      mixin Slide(1)
+      mixin Slide(2)
+      mixin Slide(3)
+      mixin Slide(4)
+      mixin Slide(5)
+      mixin Slide(6)
+      mixin Slide(7)
+      mixin Slide(8)
+      mixin Slide(9)
+      mixin Slide(10)
 
   br
   button(onclick="carousel.prev()") prev
@@ -31,5 +33,5 @@ append scripts
     var Carousel = require('carousel');
     var carousel = new Carousel(document.querySelector('.ui.carousel'));
 
-    carousel.visibleAmount = 2;
+    carousel.visibleAmount = 4;
     carousel.animation = true;

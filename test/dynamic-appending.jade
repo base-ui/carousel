@@ -1,0 +1,65 @@
+extends layout/default
+
+append styles
+  :stylus
+    [data-template]
+      display none
+
+append content
+  .ui.carousel(style="width: 200px; height: 100px;")
+    .slide-list
+      .slide(data-template="slide")
+        img(src="http://dummyimage.com/100x100&text=1")
+
+  br
+  button(onclick="carousel.prev()") prev
+  button(onclick="carousel.next()") next
+  button(onclick="carousel.left(1)") left(1)
+  button(onclick="carousel.right(1)") right(1)
+  button(onclick="carousel.left(2)") left(2)
+  button(onclick="carousel.right(2)") right(2)
+  button(onclick="carousel.start()") start
+  button(onclick="carousel.end()") end
+
+append scripts
+  script
+    var slideTemplate = document.querySelector('[data-template=slide]');
+        slideTemplate.removeAttribute('data-template');
+        slideTemplate.parentNode.removeChild(slideTemplate);
+
+    var Carousel = require('carousel');
+    var carousel = new Carousel(document.querySelector('.ui.carousel'));
+
+    carousel.visibleAmount = 2;
+    carousel.animation = true;
+
+    var slideTemplateClone;
+
+    slideTemplateClone = slideTemplate.cloneNode(true)
+    slideTemplateClone.querySelector('img').src = 'http://dummyimage.com/100x100&text=2';
+    carousel.appendSlideElement(slideTemplateClone);
+
+    slideTemplateClone = slideTemplate.cloneNode(true)
+    slideTemplateClone.querySelector('img').src = 'http://dummyimage.com/100x100&text=3';
+    carousel.appendSlideElement(slideTemplateClone);
+
+    slideTemplateClone = slideTemplate.cloneNode(true)
+    slideTemplateClone.querySelector('img').src = 'http://dummyimage.com/100x100&text=1';
+    carousel.prependSlideElement(slideTemplateClone);
+
+    slideTemplateClone = slideTemplate.cloneNode(true)
+    slideTemplateClone.querySelector('img').src = 'http://dummyimage.com/100x100&text=4';
+    carousel.appendSlideElement(slideTemplateClone);
+
+    slideTemplateClone = slideTemplate.cloneNode(true)
+    slideTemplateClone.querySelector('img').src = 'http://dummyimage.com/100x100&text=5';
+    carousel.appendSlideElement(slideTemplateClone);
+
+    slideTemplateClone = slideTemplate.cloneNode(true)
+    slideTemplateClone.querySelector('img').src = 'http://dummyimage.com/100x100&text=6';
+    carousel.appendSlideElement(slideTemplateClone);
+
+    slideTemplateClone = slideTemplate.cloneNode(true)
+    slideTemplateClone.querySelector('img').src = 'http://dummyimage.com/100x100&text=7';
+    carousel.appendSlideElement(slideTemplateClone);
+    carousel.removeSlideElement(slideTemplateClone);

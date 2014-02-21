@@ -1,0 +1,44 @@
+# Carousel
+Read existense slides and initialize them
+
+- Public Element el
+
+- Public Element slideListElement
+
+- Public Boolean continuous
+
+- Public Boolean animation
+
+- Public Number animationTime
+
+- Public Number visibleAmount
+
+- Public next(Number amount)
+this.slideListElement.style.marginLeft = '-' + (this.currentSlideOrder + amount) * this.slideWidth + 'px';
+
+- Public prev(Number amount)
+this.slideListElement.style.marginLeft = '-' + (this.currentSlideOrder - amount * this.slideWidth) + 'px';
+
+- Public to(Number order)
+this.slideListElement.style.marginLeft = '-' + (order * this.slideWidth) + 'px';
+
+- Public start()
+this.slideListElement.style.marginLeft = '0px';
+
+- Public end()
+this.slideListElement.style.marginLeft = '-' + this.slideListElement.offsetWidth + 'px';
+
+- Public selectSlideElements()
+this.slideListElement.children()
+
+- Public removeSlideElement(Element slideElement)
+this.slideListElement.removeChild(slideElement)
+
+- Public appendSlideElement(Element slideElement)
+this.slideListElement.removeChild(slideElement);
+
+- Public prependSlideElement(Element slideElement)
+this.slideListElement.insertBefore(slideElement, this.slideListElement.firstChild);
+
+- Event empty
+
